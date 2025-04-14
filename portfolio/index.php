@@ -1,7 +1,8 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
-$APPLICATION->SetTitle("test");
-?><?$APPLICATION->IncludeComponent(
+?>
+<?$APPLICATION->SetTitle('Портфолио');?>
+<?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
 	"portfolio", 
 	array(
@@ -132,7 +133,7 @@ $APPLICATION->SetTitle("test");
 		"PRODUCT_ID_VARIABLE" => "id",
 		"PRODUCT_PROPS_VARIABLE" => "prop",
 		"PRODUCT_QUANTITY_VARIABLE" => "quantity",
-		"PRODUCT_SUBSCRIPTION" => "Y",
+		"PRODUCT_SUBSCRIPTION" => "N",
 		"SEARCH_CHECK_DATES" => "Y",
 		"SEARCH_NO_WORD_LOGIC" => "Y",
 		"SEARCH_PAGE_RESULT_COUNT" => "50",
@@ -196,7 +197,7 @@ $APPLICATION->SetTitle("test");
 		"COMPONENT_TEMPLATE" => "portfolio",
 		"SIDEBAR_SECTION_POSITION" => "right",
 		"SIDEBAR_DETAIL_POSITION" => "right",
-		"SEF_FOLDER" => "/test/",
+		"SEF_FOLDER" => "/portfolio/",
 		"SEF_URL_TEMPLATES" => array(
 			"sections" => "",
 			"section" => "#SECTION_CODE_PATH#/",
@@ -211,4 +212,5 @@ $APPLICATION->SetTitle("test");
 		)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);?>
+<?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -16,10 +16,7 @@ include_once \Bitrix\Main\Application::getDocumentRoot()."/bitrix/templates/.def
     <head>
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
-        <title>Компания - шаблон контентной страницы</title>
-        <meta name="description" content="">
-        <meta name="keywords" content="">
-
+        <title><?$APPLICATION->ShowTitle();?></title>
         <!-- Favicons -->
         <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/img/favicon.png" rel="icon">
         <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
@@ -32,14 +29,14 @@ include_once \Bitrix\Main\Application::getDocumentRoot()."/bitrix/templates/.def
         <!-- Main CSS File -->
         <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/css/main.css" rel="stylesheet">
 
-        <? $APPLICATION->ShowHead(); ?>
+        <?$APPLICATION->ShowHead();?>
+
+
     </head>
 
 <body class="scrolled">
 <div id="panel">
-    <?
-    $APPLICATION->ShowPanel();
-    ?>
+    <?$APPLICATION->ShowPanel();?>
 </div>
 
     <header id="header" class="header d-flex align-items-center">

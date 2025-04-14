@@ -7,12 +7,29 @@
             <div class="row justify-content-center text-center">
                 <div class="col-lg-6">
                     <h4>Поиск</h4>
-                    <form action="#" method="post">
-                        <div class="search-form">
-                            <input class="input-seach" type="text" name="q">
-                            <input class="button-seach" name="s" type="submit" value="Найти">
-                        </div>
-                    </form>
+                    <?$APPLICATION->IncludeComponent(
+                        "bitrix:search.title",
+                        "",
+                        array(
+                            "NUM_CATEGORIES" => "1",
+                            "TOP_COUNT" => "5",
+                            "CHECK_DATES" => "N",
+                            "SHOW_OTHERS" => "N",
+                            "PAGE" => SITE_DIR."search/",
+                            "CATEGORY_OTHERS_TITLE" => GetMessage("SEARCH_OTHER"),
+                            "SHOW_INPUT" => "Y",
+                            "INPUT_ID" => "title-search-input",
+                            "CONTAINER_ID" => "search",
+                            "PRICE_CODE" => array(
+                                0 => "BASE",
+                            ),
+                            "SHOW_PREVIEW" => "Y",
+                            "PREVIEW_WIDTH" => "75",
+                            "PREVIEW_HEIGHT" => "75",
+                            "CONVERT_CURRENCY" => "Y"
+                        ),
+                        false
+                    );?>
                 </div>
             </div>
         </div>
@@ -57,14 +74,13 @@
             <div class="col-lg-2 col-md-3 footer-links">
                 <h4>Наши услуги</h4>
                 <?$APPLICATION->IncludeComponent("bitrix:menu", "", array(
-                    "ROOT_MENU_TYPE" => "left",
+                    "ROOT_MENU_TYPE" => "bottom",
                     "MENU_CACHE_TYPE" => "A",
                     "MENU_CACHE_TIME" => "36000000",
                     "MENU_CACHE_USE_GROUPS" => "Y",
                     "MENU_CACHE_GET_VARS" => array(
                     ),
                     "MAX_LEVEL" => "1",
-                    "CHILD_MENU_TYPE" => "left",
                     "USE_EXT" => "Y",
                     "ALLOW_MULTI_SELECT" => "N"
                 ),
@@ -79,7 +95,7 @@
                 <h4>Оставайтесь на связи</h4>
                 <p>Мы рады видеть вас в наших соцсетях</p>
                 <div class="social-links d-flex">
-                    <a class="forimg" href="#"><img src="assets/img/ico/vk_w.svg"></a>
+                    <a class="forimg" href="#"><img src="<?= DEFAULT_TEMPLATE_PATH?>/assets/img/ico/vk_w.svg"></a>
                 </div>
             </div>
 

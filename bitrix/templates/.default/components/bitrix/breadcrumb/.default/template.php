@@ -33,7 +33,7 @@ for($index = 0; $index < $itemSize; $index++)
 			<li id="bx_breadcrumb_'.$index.'" itemprop="itemListElement" itemscope itemtype="http://schema.org/ListItem">
 
 				<a href="'.$arResult[$index]["LINK"].'" title="'.$title.'" itemprop="item">
-					<span itemprop="name">'.$title.'</span>
+					'.$title.'
 				</a>
 				<meta itemprop="position" content="'.($index + 1).'" />
 			</li>';
@@ -42,12 +42,11 @@ for($index = 0; $index < $itemSize; $index++)
 	{
 		$strReturn .= '
 			<li>
-
-				<span>'.$title.'</span>
+				'.$title.'
 			</li>';
 	}
 }
 
-$strReturn .= '<ol style="clear:both"></ol></div>';
+$strReturn .= '<ol style="clear:both"></ol>';
 
 return $strReturn;

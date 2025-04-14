@@ -3,7 +3,7 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Поиск");
 ?>
 
-<?$APPLICATION->IncludeComponent("bitrix:search.page", "bootstrap_v4", array(
+<?$APPLICATION->IncludeComponent("bitrix:search.page", "", array(
 	"RESTART" => "N",
 	"CHECK_DATES" => "N",
 	"USE_TITLE_RANK" => "N",
@@ -13,6 +13,7 @@ $APPLICATION->SetTitle("Поиск");
 		1 => "iblock_services",
 		2 => "iblock_news",
 		3 => "iblock_catalog",
+		4 => 'iblock_content'
 	),
 	"arrFILTER_main" => array(
 	),
@@ -23,6 +24,9 @@ $APPLICATION->SetTitle("Поиск");
 		0 => "all",
 	),
 	"arrFILTER_iblock_catalog" => array(
+		0 => "all",
+	),
+	"arrFILTER_iblock_content" => array(
 		0 => "all",
 	),
 	"SHOW_WHERE" => "N",

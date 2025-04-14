@@ -39,5 +39,5 @@ if(CModule::IncludeModule('iblock'))
 		$GLOBALS["CACHE_MANAGER"]->RegisterTag("iblock_id_new");
 }
 
-$aMenuLinks = array_merge($aMenuLinks, $aMenuLinksExt);
+$aMenuLinks = array_merge([], $aMenuLinksExt);
 ?>
