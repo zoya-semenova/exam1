@@ -121,13 +121,6 @@
 <!-- Preloader -->
 <div id="preloader"></div>
 
-<!-- Vendor JS Files -->
-<script src="<?= DEFAULT_TEMPLATE_PATH?>/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
-<script src="<?= DEFAULT_TEMPLATE_PATH?>/assets/vendor/aos/aos.js"></script>
-
-<!-- Main JS File -->
-<script src="<?= DEFAULT_TEMPLATE_PATH?>/assets/js/main.js"></script>
-
 </body>
 
 </html>

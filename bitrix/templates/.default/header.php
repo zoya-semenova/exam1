@@ -1,11 +1,12 @@
 <?
+if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
 
 /** @global  CMain $APPLICATION */
 
-if(!defined("B_PROLOG_INCLUDED") || B_PROLOG_INCLUDED !== true) die();
-
 //IncludeTemplateLangFile(__FILE__);
 use Bitrix\Main\Localization\Loc;
+
+define('DEFAULT_TEMPLATE_PATH', "/bitrix/templates/.default");
 
 include_once \Bitrix\Main\Application::getDocumentRoot()."/bitrix/templates/.default/init.php";
 ?>
@@ -17,21 +18,9 @@ include_once \Bitrix\Main\Application::getDocumentRoot()."/bitrix/templates/.def
         <meta charset="utf-8">
         <meta content="width=device-width, initial-scale=1.0" name="viewport">
         <title><?$APPLICATION->ShowTitle();?></title>
-        <!-- Favicons -->
-        <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/img/favicon.png" rel="icon">
-        <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/img/apple-touch-icon.png" rel="apple-touch-icon">
 
-        <!-- Vendor CSS Files -->
-        <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-        <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
-        <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/vendor/aos/aos.css" rel="stylesheet">
-
-        <!-- Main CSS File -->
-        <link href="<?= DEFAULT_TEMPLATE_PATH?>/assets/css/main.css" rel="stylesheet">
 
         <?$APPLICATION->ShowHead();?>
-
-
     </head>
 
 <body class="scrolled">
