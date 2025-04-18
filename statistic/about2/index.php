@@ -2,45 +2,110 @@
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("О магазине");
 ?>
+<?$APPLICATION->IncludeComponent(
+    "bitrix:news",
+    "table",
+    array(
+        "IBLOCK_TYPE" => "statistic",
+        "IBLOCK_ID" => "12",
+        "TEMPLATE_THEME" => "site",
 
-	<p>Мы рады приветствовать вас на сайте нашей компании.</p>
-
-	<p>Наша компания была основана в 1993 году, а наш интернет-магазин стал одним из первых магазинов, осуществляющих on-line продажу одежды в регионе. Компания специализируется на оптовой и розничной продаже одежды как для дома, так и для офиса.</p>
-
-	<p>На данный момент мы представляем собой крупную компанию, владеющую интернет&ndash;магазином и имеющую в своей сети единый call-центр, который регулирует всю деятельность магазина, отдел продаж, службу доставки, широкий штат квалифицированных сборщиков, собственный склад c постоянным наличием необходимого запаса товаров.</p>
-
-	<p>За это время у нас сложились партнерские отношения с ведущими производителями, позволяющие предлагать высококачественную продукцию по конкурентоспособным ценам.</p>
-
-	<p>Мы можем гордиться тем, что у нас один из самых широких ассортиментов одежды в городе и области. </p>
-
-	<h2>Наши возможности</h2>
-	<div class="row">
-		<div class="col-sm-4">
-			<ul>
-				<li><span style="font-size:13px;">Быстрая доставка</span></li>
-				<li><span style="font-size:13px;">Низкие цены</span></li>
-				<li><span style="font-size:13px;">Широкий ассортимент</span></li>
-				<li><span style="font-size:13px;">Бонусы и подарки</span></li>
-			</ul>
-		</div>
-		<div class="col-sm-4">
-			<ul>
-				<li><span style="font-size:13px;">Отличное обслуживаение</span></li>
-				<li><span style="font-size:13px;">Профессиональный менеджеры</span></li>
-				<li><span style="font-size:13px;">Гарантия на все товары</span></li>
-				<li><span style="font-size:13px;">Надежные поставщики</span></li>
-			</ul>
-		</div>
-		<div class="col-sm-4">
-			<ul>
-				<li><span style="font-size:13px;">Сезонные скидки</span></li>
-				<li><span style="font-size:13px;">Программа лояльности</span></li>
-				<li><span style="font-size:13px;">Карты постоянных клиентов</span></li>
-			</ul>
-		</div>
-	</div>
-	<br/>
-	<p>Мы всегда рады общению с нашими клиентами. Если у вас есть какие-либо пожелания, предложения, замечания, касающиеся работы нашего Интернет-магазина - пишите нам, и мы с благодарностью примем ваше мнение во внимание:</p>
-	<p><b>Электронная почта</b>: <a href="mailto:sale@192.168.31.50">sale@192.168.31.50</a></p>
-
+        "NEWS_COUNT" => "10",
+		"USE_SEARCH" => "N",
+		"USE_RSS" => "Y",
+		"NUM_NEWS" => "20",
+		"NUM_DAYS" => "180",
+		"YANDEX" => "N",
+		"USE_RATING" => "N",
+		"USE_CATEGORIES" => "N",
+		"USE_REVIEW" => "N",
+		"USE_FILTER" => "N",
+		"SORT_BY1" => "ACTIVE_FROM",
+		"SORT_ORDER1" => "DESC",
+		"SORT_BY2" => "SORT",
+		"SORT_ORDER2" => "ASC",
+		"CHECK_DATES" => "Y",
+		"SEF_MODE" => "Y",
+		"SEF_FOLDER" => "/statistic/about2/",
+		"AJAX_MODE" => "N",
+		"AJAX_OPTION_SHADOW" => "Y",
+		"AJAX_OPTION_JUMP" => "N",
+		"AJAX_OPTION_STYLE" => "Y",
+		"AJAX_OPTION_HISTORY" => "N",
+		"CACHE_TYPE" => "A",
+		"CACHE_TIME" => "36000000",
+		"CACHE_FILTER" => "N",
+		"CACHE_GROUPS" => "Y",
+		"DISPLAY_PANEL" => "Y",
+		"SET_TITLE" => "Y",
+		"SET_STATUS_404" => "Y",
+		"INCLUDE_IBLOCK_INTO_CHAIN" => "N",
+		"ADD_SECTIONS_CHAIN" => "N",
+		"ADD_ELEMENT_CHAIN" => "Y",
+		"USE_PERMISSIONS" => "N",
+		"PREVIEW_TRUNCATE_LEN" => "",
+		"LIST_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"LIST_FIELD_CODE" => array(
+    0 => "SHOW_COUNTER",
+    1 => "",
+),
+		"LIST_PROPERTY_CODE" => array(
+    0 => "PRODUCT",
+    1 => "PRODUCT_CATEGORY",
+    2 => "CITY",
+    3 => "QUANTITY"
+),
+		"HIDE_LINK_WHEN_NO_DETAIL" => "N",
+		"DISPLAY_NAME" => "Y",
+		"META_KEYWORDS" => "-",
+		"META_DESCRIPTION" => "-",
+		"BROWSER_TITLE" => "-",
+		"DETAIL_ACTIVE_DATE_FORMAT" => "d.m.Y",
+		"DETAIL_FIELD_CODE" => array(
+    0 => "",
+    1 => "",
+),
+		"DETAIL_PROPERTY_CODE" => array(
+			0 => "PRODUCT",
+			1 => "PRODUCT_CATEGORY",
+			2 => "CITY",
+			3 => "QUANTITY"
+),
+		"DETAIL_DISPLAY_TOP_PAGER" => "N",
+		"DETAIL_DISPLAY_BOTTOM_PAGER" => "Y",
+		"DETAIL_PAGER_TITLE" => "Страница",
+		"DETAIL_PAGER_TEMPLATE" => "arrows",
+		"DETAIL_PAGER_SHOW_ALL" => "Y",
+		"DISPLAY_TOP_PAGER" => "N",
+		"DISPLAY_BOTTOM_PAGER" => "Y",
+		"PAGER_TITLE" => "Новости",
+		"PAGER_SHOW_ALWAYS" => "N",
+		"PAGER_TEMPLATE" => "arrows",
+		"PAGER_DESC_NUMBERING" => "N",
+		"PAGER_DESC_NUMBERING_CACHE_TIME" => "36000000",
+		"PAGER_SHOW_ALL" => "N",
+		"DISPLAY_DATE" => "Y",
+		"DISPLAY_PICTURE" => "Y",
+		"DISPLAY_PREVIEW_TEXT" => "Y",
+		"AJAX_OPTION_ADDITIONAL" => "",
+		"SLIDER_PROPERTY" => "PICS_NEWS",
+		"COMPONENT_TEMPLATE" => "flat",
+		"SET_LAST_MODIFIED" => "N",
+		"STRICT_SECTION_CHECK" => "N",
+		"USE_SHARE" => "N",
+		"MEDIA_PROPERTY" => "",
+		"DETAIL_SET_CANONICAL_URL" => "N",
+		"PAGER_BASE_LINK_ENABLE" => "N",
+		"SHOW_404" => "N",
+		"MESSAGE_404" => "",
+		"SEF_URL_TEMPLATES" => array(
+    "news" => "",
+    "section" => "",
+    "detail" => "#ELEMENT_ID#/",
+    "rss" => "rss/",
+    "rss_section" => "#SECTION_ID#/rss/",
+)
+    ),
+    false
+);?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
