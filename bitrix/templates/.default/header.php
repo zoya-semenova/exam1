@@ -31,7 +31,7 @@ include_once \Bitrix\Main\Application::getDocumentRoot()."/bitrix/templates/.def
     <header id="header" class="header d-flex align-items-center">
         <div class="container-fluid container-xl position-relative d-flex align-items-center justify-content-between">
 
-            <a href="#" class="logo d-flex align-items-center">
+            <a href="/" class="logo d-flex align-items-center">
                 <h1 class="sitename"><?= GetMessage('COMPANY'); ?></h1>
             </a>
 
@@ -41,8 +41,8 @@ include_once \Bitrix\Main\Application::getDocumentRoot()."/bitrix/templates/.def
                     "horizontal_multilevel",
                     array(
                         "ROOT_MENU_TYPE" => "top",
-                        "MENU_CACHE_TYPE" => "A",
-                        "MENU_CACHE_TIME" => "3600000",
+                        "MENU_CACHE_TYPE" => "N",
+                        "MENU_CACHE_TIME" => "0",
                         "MENU_CACHE_USE_GROUPS" => "N",
                         "MENU_CACHE_GET_VARS" => array(
                         ),
