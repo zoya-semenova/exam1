@@ -51,10 +51,10 @@ foreach($arResult as $arItem)://echo "<pre>";print_r($arItem);exit;?>
 
 			<?if ($arItem["DEPTH_LEVEL"] == 1):?>
                 <li class="nav-item">
-                    <a href="" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>">
+                    <a href="<?=$arItem["LINK"]?>" class="<?if ($arItem["SELECTED"]):?>root-item-selected<?else:?>root-item<?endif?>" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>">
                         <i class="bi bi-menu-button-wide"></i><span><?=$arItem["TEXT"]?></span><i class="bi bi-chevron-down ms-auto"></i></a></li>
 			<?else:?>
-				<li><a href="" class="denied" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>">
+				<li><a href="<?=$arItem["LINK"]?>" class="denied" title="<?=GetMessage("MENU_ITEM_ACCESS_DENIED")?>">
                         <i class="bi bi-circle"></i><span><?=$arItem["TEXT"]?></a></li>
 			<?endif?>
 
