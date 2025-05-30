@@ -1,10 +1,11 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 ?>
-<?$APPLICATION->SetTitle('Портфолио');?>
+<?$APPLICATION->SetTitle('Портфолио');
+//$APPLICATION->SetPageProperty('ex2_meta', 'ggg');?>
 <?$APPLICATION->IncludeComponent(
 	"bitrix:catalog", 
-	"portfolio", 
+	"",
 	array(
 		"ACTION_VARIABLE" => "action",
 		"ADD_ELEMENT_CHAIN" => "N",
@@ -211,6 +212,6 @@ require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 			),
 		)
 	),
-	false
+	null
 );?>
 <?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

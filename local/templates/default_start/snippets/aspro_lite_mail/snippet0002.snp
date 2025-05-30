@@ -1,0 +1,21 @@
+<div data-bx-block-editor-block-type="text">
+	<table border="0" cellpadding="0" cellspacing="0" width="100%" class="bxBlockText mail-block mail-body-title" style="text-align: left;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;table-layout: fixed;">
+	<tbody class="bxBlockOut">
+        <tr>
+            <td valign="top" class="bxBlockInn bxBlockInnText" style="-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-line-height-rule: exactly;">
+                <table align="left" cellpadding="0" cellspacing="0" width="100%" style="text-align: left;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-table-lspace: 0pt;mso-table-rspace: 0pt;border-collapse: collapse;table-layout: fixed;">
+                <tbody>
+                    <tr>
+                        <td valign="top" class="bxBlockPadding bxBlockContentText" style="font-family: Arial, Helvetica;color: #222222;font-weight: 400;font-size: 16px;line-height: 22px;margin: 0;padding-top: 0px;padding: 16px 32px;-ms-text-size-adjust: 100%;-webkit-text-size-adjust: 100%;mso-line-height-rule: exactly;">
+                            <h2 style="font-family: Arial, Helvetica;color: #222222 !important;font-size: 32px;line-height: 42px;font-style: normal !important;font-weight: bold !important;text-align: left !important;display: block;margin: 0;padding: 0;">
+                                Main email title here
+                            </h2>
+                        </td>
+                    </tr>
+                </tbody>
+                </table>
+            </td>
+        </tr>
+	</tbody>
+	</table>
+</div>
