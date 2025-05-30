@@ -1,7 +1,12 @@
 <?
 require($_SERVER["DOCUMENT_ROOT"]."/bitrix/header.php");
 $APPLICATION->SetTitle("Новости");
-?><?$APPLICATION->IncludeComponent("bitrix:news", "bootstrap_v4", array(
+?><?
+
+function fff() {
+	echo "fff";
+}
+$APPLICATION->IncludeComponent("bitrix:news", "bootstrap_v4", array(
 	"IBLOCK_TYPE" => "news",
 	"IBLOCK_ID" => "1",
 	"TEMPLATE_THEME" => "site",
@@ -90,4 +95,8 @@ $APPLICATION->SetTitle("Новости");
 	)
 	),
 	false
-);?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>
+);
+
+fff();
+
+?><?require($_SERVER["DOCUMENT_ROOT"]."/bitrix/footer.php");?>

@@ -1,0 +1,42 @@
+<?
+$MESS['BASKET_TITLE'] = 'Basket';
+$MESS['RUB'] = 'rub';
+$MESS['SUM'] = 'Total';
+$MESS['BUTTON_TITLE_DEFAULT'] = 'Go to cart';
+$MESS['REVIEW_BUTTON_TITLE_DEFAULT'] = 'Leave a review';
+
+$MESS['TSBS_READY'] = 'Items in your cart:';
+$MESS['TSBS_PRICE'] = 'Price:';
+$MESS['TSBS_QUANTITY'] = 'Quantity:';
+
+$MESS['TSBS_2BASKET'] = 'Go to cart';
+$MESS['TSBS_2ORDER'] = 'Checkout';
+$MESS['TSBS_DELAY'] = 'Delayed Items';
+$MESS['TSBS_UNAVAIL'] = 'Unavailable for purchase';
+$MESS['TSBS_SUBSCRIBE'] = 'Subscription';
+$MESS['SALE_NAME'] = 'Products';
+$MESS['SALE_HEADER_NAME'] = 'Item';
+$MESS['SALE_PROPS'] = 'Properties';
+$MESS['SALE_HEADER_DISCOUNT'] = 'Price';
+$MESS['SALE_HEADER_SUMM'] = 'Amount';
+$MESS['SALE_PRICE'] = 'Price';
+$MESS['SALE_TYPE'] = 'Price type';
+$MESS['SALE_QUANTITY'] = 'Quantity';
+$MESS['SALE_HEADER_QUANTITY'] = 'Qty';
+$MESS['SALE_SUM'] = 'Amount';
+$MESS['SALE_DELETE'] = 'Delete';
+$MESS['SALE_DELAY'] = 'Delay';
+$MESS['SALE_ADD_TO_BASKET'] = 'Add to order';
+$MESS['SALE_WEIGHT'] = 'Weight';
+$MESS['SALE_TOTAL_WEIGHT'] = 'Total weight:';
+$MESS['SALE_WEIGHT_G'] = 'g';
+$MESS['SALE_DELAYED_TITLE'] = 'Delayed';
+$MESS['SALE_UNAVAIL_TITLE'] = 'Not available for sale';
+$MESS['STB_ORDER_PROMT'] = 'To start placing an order, click the \'Place an order\' button.';
+$MESS['STB_COUPON_PROMT'] = 'Enter discount coupon code:';
+$MESS['SALE_VAT'] = 'VAT:';
+$MESS['SALE_VAT_EXCLUDED'] = 'Products for:';
+$MESS['SALE_VAT_INCLUDED'] = 'VAT included:';
+$MESS['SALE_TOTAL'] = 'Total:';
+$MESS['SALE_CONTENT_DISCOUNT'] = 'Discount';
+$MESS['SALE_DISCOUNT'] = 'Discount';
