@@ -1,5 +1,14 @@
 <?php
 return array (
+    'smtp' =>
+        array (
+            'value' =>
+                array(
+                    'enabled' => true,
+                    'debug' => true, //optional
+                    'log_file' => '/var/mailer.log', //optional
+                ),
+        ),
   'utf_mode' =>
   array (
     'value' => true,

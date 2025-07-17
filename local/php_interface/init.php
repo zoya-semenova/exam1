@@ -2,6 +2,6 @@
 
 use Bitrix\Main\Loader;
 
-//Loader::includeModule('local.custom');
+Loader::includeModule('local.custom');
 
 

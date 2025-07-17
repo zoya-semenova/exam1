@@ -24,36 +24,39 @@ if ($res = $arRes->Fetch()) {//echo "<pre>";print_r($res);echo "</pre>";exit;
     $userIDs[] = $res['ID'];
 }
 
-//echo "<pre>";print_r($userIDs);echo "</pre>";
+//echo "<pre>";print_r($userIDs);echo "</pre>";exit;
 
-$res = CIBlockElement::GetList(
-    ["PROPERTY_PRODUCT"=> "ASC", "ID" => "ASC"],
-    [
-        "IBLOCK_ID" => 13,
-        "ACTIVE" => "Y",
-        "PROPERTY_PRODUCT" => $itemIDs,
-        "PROPERTY_AUTHOR" => $userIDs,
-    ],
-    false,
-    false,
-    [
-        "ID",
-        "IBLOCK_ID",
-        "NAME",
-        "PROPERTY_PRODUCT",
-    ]
-);
 
 $relatedReview = [];
 $productCount = [];
-while ($row = $res->GetNext())
-{//echo "<pre>";print_r($row);echo "</pre>";exit;
-    $arResult["EXTRA"][$row["PROPERTY_PRODUCT_VALUE"]][] = $row;
-    $productCount[$row["PROPERTY_PRODUCT_VALUE"]] = $row["PROPERTY_PRODUCT_VALUE"];
-    if (empty($relatedReview)) {
-        $relatedReview = $row;
+if ($itemIDs && $userIDs) {
+    $res = CIBlockElement::GetList(
+        ["PROPERTY_PRODUCT"=> "DESC", "ID" => "ASC"],
+        [
+            "IBLOCK_ID" => 13,
+            "ACTIVE" => "Y",
+            "PROPERTY_PRODUCT" => $itemIDs,
+            "PROPERTY_AUTHOR" => $userIDs,
+        ],
+        false,
+        false,
+        [
+            "ID",
+            "IBLOCK_ID",
+            "NAME",
+            "PROPERTY_PRODUCT",
+        ]
+    );
+    while ($row = $res->GetNext())
+    {//echo "<pre>";print_r($row);echo "</pre>";exit;
+        $arResult["EXTRA"][$row["PROPERTY_PRODUCT_VALUE"]][] = $row;
+        $productCount[$row["PROPERTY_PRODUCT_VALUE"]] = $row["PROPERTY_PRODUCT_VALUE"];
+        if (empty($relatedReview)) {
+            $relatedReview = $row;
+        }
     }
 }
+
 
 $arResult['PRODUCT_COUNT'] = count($productCount);
 
